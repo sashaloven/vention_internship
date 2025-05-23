@@ -4,4 +4,5 @@ module "vention_vpc" {
     cidr_block = var.cidr_block
     subnets = var.subnets
     internet_gateway = var.internet_gateway
+    secG = var.secG
 }
