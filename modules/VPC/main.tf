@@ -46,7 +46,7 @@ resource "aws_route_table" "this" {
 resource "aws_security_group" "this" {
     for_each = var.secG
     name     = each.value.name
-    vpc_id = aws_vpc.this.id
+    vpc_id   = aws_vpc.this.id
 }
 
 resource "aws_security_group_rule" "ingress" {
