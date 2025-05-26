@@ -31,9 +31,6 @@ variable "instance_ids" {
   type = set(string)
 }
 
-variable "security_group_ids" {
-  type        = map(string) 
-}
 
 variable "security_groups" {
   type = list(string)

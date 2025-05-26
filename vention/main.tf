@@ -22,8 +22,6 @@ module "vention_alb" {
   vention_tg          = var.vention_tg
   vention_listener    = var.vention_listener
   instance_ids        = module.vention_ec2.instance_ids
-  security_group_ids  = module.vention_vpc.security_group_ids
-
-  security_groups     = [module.vention_vpc.security_group_ids["alb_sg"]]
-  subnets             = [module.vention_vpc.subnet_ids[var.vention_alb.subnets[0]]] 
-  }
+  security_groups     = var.security_groups
+  subnets             = var.subnets
+}

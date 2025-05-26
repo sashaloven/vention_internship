@@ -1,7 +1,7 @@
 output "security_groups" {
-  value = values(aws_security_group.this)[*].id
+  value = values(module.vention_vpc.aws_security_group.this)[*].id
 }
 
 output "subnets" {
-  value = values(aws_subnet.this)[*].id
+  value = values(module.vention_vpc.aws_subnet.this)[*].id
 }
