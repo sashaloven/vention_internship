@@ -2,7 +2,7 @@ resource "aws_lb" "vention_alb" {
   name               = var.vention_alb.name
   internal           = var.vention_alb.internal
   load_balancer_type = var.vention_alb.load_balancer_type
-  security_groups    = var.security_groups         # ✅
+  security_groups    = var.security_groups         
   subnets            = var.subnets
 
   enable_deletion_protection = var.vention_alb.enable_deletion_protection
